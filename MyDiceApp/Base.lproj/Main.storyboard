@@ -29,24 +29,30 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ta8-J7-3iv">
                                 <rect key="frame" x="136.66666666666666" y="598" width="119.99999999999997" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="pCB-6M-dNB"/>
                                     <constraint firstAttribute="width" constant="120" id="ruV-l2-Pd2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="ROLL"/>
+                                <state key="normal" title="ROLL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="rollButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8D5-dJ-k57"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xj5-1H-9Ik">
                                 <rect key="frame" x="32" y="347.66666666666669" width="329" height="157"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="36S-K3-Dhc">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black1" translatesAutoresizingMaskIntoConstraints="NO" id="36S-K3-Dhc">
                                         <rect key="frame" x="0.0" y="0.0" width="157" height="157"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="36S-K3-Dhc" secondAttribute="height" multiplier="1:1" id="c6Y-ef-tCt"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ekn-uL-2ZI">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black1" translatesAutoresizingMaskIntoConstraints="NO" id="Ekn-uL-2ZI">
                                         <rect key="frame" x="172" y="0.0" width="157" height="157"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Ekn-uL-2ZI" secondAttribute="height" multiplier="1:1" id="NBG-dM-WaL"/>
@@ -68,6 +74,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ta8-J7-3iv" secondAttribute="bottom" constant="180" id="tAF-bq-O4J"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="leftDiceView" destination="36S-K3-Dhc" id="bkv-hE-qM7"/>
+                        <outlet property="rightDiceView" destination="Ekn-uL-2ZI" id="snb-Js-G2k"/>
+                        <outlet property="rollButtonTabbed" destination="8bC-Xf-vdC" id="RGb-ZU-ag5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,6 +86,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="black1" width="399" height="399"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
